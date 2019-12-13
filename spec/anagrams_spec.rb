@@ -23,4 +23,9 @@ describe('Anagrams#anagram_check') do
     expect(case_check.anagram_check).to(eq('These words are not anagrams'))
   end
 
+  it('checks if two inputted phrases are anagrams with case') do
+    case_check = Anagrams.new('Listen','Arrow')
+    expect(case_check.anagram_check).to(eq('These words are not anagrams'))
+  end
+
 end

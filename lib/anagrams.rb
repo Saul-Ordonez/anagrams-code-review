@@ -1,5 +1,5 @@
 class Anagrams
-  attr_accessor(:input_one, :input_two)
+  attr_reader(:input_one, :input_two)
 
   def initialize(input_one, input_two)
     @input_one = input_one

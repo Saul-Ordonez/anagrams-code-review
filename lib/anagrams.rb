@@ -1,19 +1,14 @@
 class Anagrams
-  def initialize(first_word, second_word)
-    @first_word = first_word
-    @second_word = second_word
-  end
+  attr_accessor(:input_one, :input_two)
 
-  def first_word
-    @first_word
-  end
-
-  def second_word
-    @second_word
+  def initialize(input_one, input_two)
+    @input_one = input_one
+    @input_two = input_two
   end
 
   def anagram_check
-    
+    first_word = @input_one.chars.sort.join
+    second_word = @input_two.chars.sort.join
   end
 
 end

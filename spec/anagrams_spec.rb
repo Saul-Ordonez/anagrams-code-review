@@ -9,7 +9,7 @@ describe('Anagrams#anagram_check') do
   end
 
   it('checks if two inputted words are not anagrams') do
-    anagrams = Anagrams.new('listen','arrow')
+    anagrams = Anagrams.new('listen','nile')
     expect(anagrams.anagram_check).to(eq('These words are not anagrams'))
   end
 
@@ -19,7 +19,7 @@ describe('Anagrams#anagram_check') do
   end
 
   it('checks if two inputted words are not anagrams with case insensitivity') do
-    anagrams = Anagrams.new('Listen','Arrow')
+    anagrams = Anagrams.new('Listen','Nile')
     expect(anagrams.anagram_check).to(eq('These words are not anagrams'))
   end
 

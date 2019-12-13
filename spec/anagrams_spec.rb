@@ -1,3 +1,4 @@
+# require('ruby-dictionary')
 require('rspec')
 require('anagrams')
 

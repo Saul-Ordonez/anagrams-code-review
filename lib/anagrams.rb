@@ -11,11 +11,14 @@ class Anagrams
     second_word = @input_two.gsub(/\s+/, '').downcase.chars.sort.join
     first_vowels = first_word.scan(/[aeoui]/)
     second_vowels = second_word.scan(/[aeoui]/)
-    if first_word == second_word && first_vowels.length > 0 && second_vowels.length > 0
+    if first_vowels.length == 0 || second_vowels.length == 0
+      outcome = 'Please enter a real word'
+    elsif first_word == second_word
       outcome = 'These words are anagrams'
     else
       outcome = 'These words are not anagrams'
     end
+    outcome
   end
 
 end

@@ -40,7 +40,7 @@ describe('Anagrams#anagram_check') do
 
   it('checks if two inputted phrases are not anagrams with vowels') do
     anagrams = Anagrams.new('lstn','slnt')
-    expect(anagrams.anagram_check).to(eq('These words are not anagrams'))
+    expect(anagrams.anagram_check).to(eq('Please enter a real word'))
   end
 
 end

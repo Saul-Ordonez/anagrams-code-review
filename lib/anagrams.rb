@@ -9,12 +9,13 @@ class Anagrams
   def anagram_check
     first_word = @input_one.gsub(/\s+/, '').downcase.chars.sort.join
     second_word = @input_two.gsub(/\s+/, '').downcase.chars.sort.join
-    if first_word == second_word
+    first_vowels = first_word.scan(/[aeoui]/)
+    second_vowels = second_word.scan(/[aeoui]/)
+    if first_word == second_word && first_vowels.length > 0 && second_vowels.length > 0
       outcome = 'These words are anagrams'
     else
       outcome = 'These words are not anagrams'
     end
-    outcome
   end
 
 end

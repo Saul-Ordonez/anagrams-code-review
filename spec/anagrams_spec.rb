@@ -23,8 +23,13 @@ describe('Anagrams#anagram_check') do
     expect(case_check.anagram_check).to(eq('These words are not anagrams'))
   end
 
-  it('checks if two inputted phrases are anagrams with case') do
-    case_check = Anagrams.new('Listen','Arrow')
+  it('checks if two inputted phrases are anagrams') do
+    case_check = Anagrams.new('Astronomer','Moon starer')
+    expect(case_check.anagram_check).to(eq('These words are anagrams'))
+  end
+
+  it('checks if two inputted phrases are not anagrams') do
+    case_check = Anagrams.new('Astronomer','Moon gazer')
     expect(case_check.anagram_check).to(eq('These words are not anagrams'))
   end
 

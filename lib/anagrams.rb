@@ -7,8 +7,8 @@ class Anagrams
   end
 
   def anagram_check
-    first_word = @input_one.downcase.chars.sort.join
-    second_word = @input_two.downcase.chars.sort.join
+    first_word = @input_one.gsub(/\s+/, '').downcase.chars.sort.join
+    second_word = @input_two.gsub(/\s+/, '').downcase.chars.sort.join
     if first_word == second_word
       outcome = 'These words are anagrams'
     else

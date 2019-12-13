@@ -48,4 +48,9 @@ describe('Anagrams#anagram_check') do
     expect(anagrams.anagram_check).to(eq('These words are anagrams'))
   end
 
+  it('checks if two inputted words are antigrams') do
+    anagrams = Anagrams.new('listen','arrow')
+    expect(anagrams.anagram_check).to(eq('These words are not anagrams but are antigrams'))
+  end
+
 end

@@ -9,7 +9,6 @@ puts "Enter another word:"
 anagrams = Anagrams.new(@input_one, @input_two)
 outcome = anagrams.anagram_check()
 
-
 if outcome == 'Please enter a real word'
   puts 'Please enter a real word'
 elsif outcome == 'These words are anagrams'

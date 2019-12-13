@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 class Anagrams
   attr_reader(:input_one, :input_two)
 
@@ -14,7 +13,7 @@ class Anagrams
     second_word_vowels = second_word.scan(/[aeoui]/)
     if first_word_vowels.length == 0 || second_word_vowels.length == 0
       outcome = 'Please enter a real word'
-    elsif first_word == second_word
+    elsif fist_special_chars_removed == second_special_chars_removed
       outcome = 'These words are anagrams'
     else
       outcome = 'These words are not anagrams'

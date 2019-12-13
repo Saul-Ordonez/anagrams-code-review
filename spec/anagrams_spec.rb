@@ -33,14 +33,19 @@ describe('Anagrams#anagram_check') do
     expect(anagrams.anagram_check).to(eq('These words are not anagrams'))
   end
 
-  it('checks if two inputted phrases are anagrams with vowels') do
+  it('checks if two inputted words are anagrams with vowels') do
     anagrams = Anagrams.new('listen','silent')
     expect(anagrams.anagram_check).to(eq('These words are anagrams'))
   end
 
-  it('checks if two inputted phrases are not anagrams with vowels') do
+  it('checks if two inputted words are not anagrams with vowels') do
     anagrams = Anagrams.new('lstn','slnt')
     expect(anagrams.anagram_check).to(eq('Please enter a real word'))
+  end
+
+  it('checks if two inputted words are anagrams with special characters removed') do
+    anagrams = Anagrams.new('listen!','*silent')
+    expect(anagrams.anagram_check).to(eq('These words are anagrams'))
   end
 
 end

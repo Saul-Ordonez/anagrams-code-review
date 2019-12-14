@@ -16,7 +16,7 @@ class Anagrams
     elsif first_word == second_word
       outcome = 'These words are anagrams'
     else
-      outcome = 'These words are not anagrams'
+      outcome = 'These words are not anagrams or antigrams'
     end
     outcome
   end

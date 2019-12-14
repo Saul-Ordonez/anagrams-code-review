@@ -50,8 +50,18 @@ describe('Anagrams#anagram_check') do
   end
 
   it('checks if two inputted words are antigrams') do
-    anagrams = Anagrams.new('listen','hop')
+    anagrams = Anagrams.new('listen','arrow')
     expect(anagrams.anagram_check).to(eq('These words are not anagrams but are antigrams'))
+  end
+
+  it('checks if two inputted words are not antigrams when special characters are added') do
+    anagrams = Anagrams.new('lis$ten','ar!row')
+    expect(anagrams.anagram_check).to(eq('These words are not anagrams but are antigrams'))
+  end
+
+  it('checks if two inputted words are not antigrams when no vowels are added') do
+    anagrams = Anagrams.new('lstn','arrw')
+    expect(anagrams.anagram_check).to(eq('Please enter a real word'))
   end
 
 end

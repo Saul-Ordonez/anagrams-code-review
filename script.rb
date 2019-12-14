@@ -9,11 +9,11 @@ puts "Enter another word:"
 anagrams = Anagrams.new(@input_one, @input_two)
 outcome = anagrams.anagram_check()
 
-if outcome == 'Please enter a real word'
+if outcome == 'non word'
   puts 'Please enter a real word'
-elsif outcome == 'These words are anagrams'
+elsif outcome == 'anagram'
   puts 'These words are anagrams'
-elsif outcome == 'These words are not anagrams but are antigrams'
+elsif outcome == 'antigram'
   puts 'These words are not anagrams but are antigrams'
 else
   puts 'These words are not anagrams'

@@ -13,13 +13,13 @@ class Anagrams
     second_word_vowels = second_word.scan(/[aeiouy]/)
     antigram_check = !@input_one.downcase.gsub(/[^a-z]/, '').chars.any? { |chars| @input_two.downcase.gsub(/[^a-z]/, '').chars.include? chars }
     if first_word_vowels.length == 0 || second_word_vowels.length == 0
-      outcome = 'Please enter a real word'
+      outcome = 'non word'
     elsif first_word == second_word
-      outcome = 'These words are anagrams'
+      outcome = 'anagram'
     elsif antigram_check == true
-      outcome = 'These words are not anagrams but are antigrams'
+      outcome = 'antigram'
     else
-      outcome = 'These words are not anagrams or antigrams'
+      outcome = 'none'
     end
     outcome
   end

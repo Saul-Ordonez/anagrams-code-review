@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'nokogiri'
-gem 'rack', '~> 2.0.1'
+gem 'rack', '~> 2.0.8'
 gem 'rspec'
 gem 'pry'
 gem 'ruby-dictionary'
